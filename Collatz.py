@@ -34,6 +34,11 @@ def collatz_eval ((i, j)) :
     """
     assert i > 0
     assert j > 0
+
+    if i > j:
+        working_num = j
+        j = i
+        i = working_num
     
     v = 1
     while i <= j:
