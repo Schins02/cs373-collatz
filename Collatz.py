@@ -49,7 +49,7 @@ def collatz_eval ((i, j)) :
     while i <= j:
         working_num = i
         cycle = 1
-        while working_num > 1
+        while working_num > 1:
             if working_num % 2 == 0:
                 working_num = working_num >> 1
                 cycle += 1
