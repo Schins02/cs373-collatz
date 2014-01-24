@@ -41,16 +41,21 @@ def collatz_eval ((i, j)) :
         i = working_num
     
     v = 1
+
+    #if j/2 > i we can start counting from tallying from j/2
+    if(j >> 1) > i:
+        i = j >> 1
+
     while i <= j:
         working_num = i
         cycle = 1
         while working_num > 1
             if working_num % 2 == 0:
-                num /= 2
+                working_num = working_num >> 1
+                cycle += 1
             else:
-                working_num = working_num * 3 + 1
-                
-            cycle += 1
+                working_num = working_num + (working_num >> 1) + 1
+                cycle += 2
 
         if cycle > v:
             v = cycle
