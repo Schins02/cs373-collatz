@@ -1,0 +1,20 @@
+Two optimizations:
+
+Time: 7.04
+Memory: 4.0
+
+Time: 7.04
+Memory: 4.0
+
+Time: 7.03
+Memory: 4.0
+
+Time: 7.04
+Memory: 4.0
+
+Time: 7.28
+Memory: 4.0
+
+Time: 7.05
+Memory: 4.0
+
