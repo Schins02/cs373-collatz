@@ -18,3 +18,7 @@ Memory: 4.0
 Time: 7.05
 Memory: 4.0
 
+Lazy Cache:
+Time: 7.48
+Memory: 4.0
+
