@@ -10,7 +10,7 @@
 # collatz_read
 # ------------
 
-import sys
+
 cache = [0] * 1000000
 
 def collatz_read (r) :
@@ -42,24 +42,21 @@ def collatz_eval ((i, j)) :
 
     if i > j:
         i,j = j,i
-    """if i > j:
-        working_num = i
-        i = j
-        j = i"""
-            
+    
     v = 1
 
-    #if j/2 > i we can start counting from tallying from j/2
+    #if j/2 > i we can start tallying cycle lengths from j/2
     if(j >> 1) > i:
         i = j >> 1
 
     while i <= j:
-        if cache[i] == 0:
-
             working_num = i
             cycle = 1
             while working_num > 1:
-                if working_num % 2 == 0:
+                if working_num < 1000000 and cache[working_num] != 0:
+                    cycle += cache[working_num] - 1
+                    break
+                elif working_num % 2 == 0:
                     working_num = working_num >> 1
                     cycle += 1
                 else:
@@ -70,12 +67,7 @@ def collatz_eval ((i, j)) :
             if cycle > v:
                 v = cycle
 
-        else:
-            cycle = cache[i]
-            if cycle > v:
-                v = cycle
-
-        i+= 1
+            i+= 1
 
     assert v > 0
     return v
@@ -104,18 +96,10 @@ def collatz_solve (r, w) :
     r is a reader
     w is a writer
     """
+
     for t in collatz_read(r) :
         v = collatz_eval(t)
         collatz_print(w, t, v)
     
-"""def figure() :
-    num = 0
-    while num < 150:
-        if cache[num] != 0:
-            print "the max cycle for %d is %d" % (num, cache[num])
-        num += 1"""
 
 
-
-collatz_solve(sys.stdin, sys.stdout)
-#figure()
