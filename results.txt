@@ -41,6 +41,37 @@ Time: 2.33
 Memory: 4.0
 
 
+Meta + Lazy cache:
+Time .55
+Memory 4.0
+
+Time .47
+Memory 4.0
+
+Time .46
+Memory 4.0
+
+Time .49
+Memory 4.0
+
+Time .47
+Memory 4.0
+
+Time .44
+Memory 4.0
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
