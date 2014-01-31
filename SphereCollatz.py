@@ -78,7 +78,7 @@ def collatz_eval ((i, j)) :
                 v = cycle
             i += 1
 
-        meta_index_1 += 1 #increment since we calculated cycle lengths to an increment on 125
+        meta_index_1 += 1 #increment since we calculated cycle lengths to an increment an 125
         while meta_index_1 < meta_index_2 :
             if meta_cache[meta_index_1] > v:
                 v = meta_cache[meta_index_1]
